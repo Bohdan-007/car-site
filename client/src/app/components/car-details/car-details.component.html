@@ -1,0 +1,85 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="rounded form-wrapper">
+        <h1 class="fs-3 text-center">Reading panel</h1>
+        <form>
+          <div class="mb-3">
+            <label for="carIdField" class="form-label">Id</label>
+            <input
+              type="text"
+              class="form-control"
+              value="{{ car.id }}"
+              id="carIdField"
+              disabled
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="carNameField" class="form-label">Car name</label>
+            <input
+              type="text"
+              class="form-control"
+              value="{{ car.name }}"
+              id="carNameField"
+              disabled
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="carModelField" class="form-label">Car model</label>
+            <input
+              type="text"
+              class="form-control"
+              value="{{ car.model }}"
+              id="carModelField"
+              disabled
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="carPriceField" class="form-label">Car price</label>
+            <input
+              type="text"
+              class="form-control"
+              value="{{ car.price }} (USD)"
+              id="carPriceField"
+              disabled
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="carEngineCapacityField" class="form-label"
+              >Car engine capacity</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              value="{{ car.engineCapacity }} (l)"
+              disabled
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="carMileageField" class="form-label">Car mileage</label>
+            <input
+              type="text"
+              class="form-control"
+              value="{{ car.mileage }} (km)"
+              id="carMileageField"
+              disabled
+            />
+          </div>
+
+          <button type="button" class="btn btn-primary me-3" (click)="goBack()">
+            Go Back
+          </button>
+
+          <button type="button" class="btn btn-primary" (click)="goEdit()">
+            Edit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

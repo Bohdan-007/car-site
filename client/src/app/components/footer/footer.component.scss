@@ -1,0 +1,25 @@
+.footer {
+
+  .my-nav-link {
+    &:hover {
+      color: #ffca2c !important;
+    }
+
+    &.link-active {
+      transition: none;
+      color: #ff9955 !important;
+      border-bottom: 2px solid #ff9955;
+    }
+  }
+
+  .my-social-li {
+    a {
+      transition: .2s;
+
+      &:hover {
+        color: #ffca2c !important;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,26 @@
+<!-- <form> -->
+<div class="container">
+  <div class="row">
+    <div
+      class="col-5 col-sm-3 col-md-4 col-lg-2 mx-auto mb-sm-2 mb-md-0 my-margin"
+    >
+      <select name="cars" class="form-select" [(ngModel)]="searchCarByValue">
+        <option selected value="name">Name</option>
+        <option value="model">Model</option>
+        <option value="price">Price</option>
+      </select>
+    </div>
+
+    <div class="col-12 col-md-8 mx-auto">
+      <input
+        name="searchCarInput"
+        type="text"
+        class="form-control my-input"
+        [(ngModel)]="searchCarInput"
+        (input)="updateSearchVelue()"
+        placeholder="Search..."
+      />
+    </div>
+  </div>
+</div>
+<!-- </form> -->

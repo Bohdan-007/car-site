@@ -1,0 +1,42 @@
+<div class="container">
+  <!-- <div class="row">
+    <div class="col col-4 mx-auto my-3">
+      <app-car-search></app-car-search>
+    </div>
+  </div> -->
+  <div class="row">
+    <div class="col col-12">
+      <ul class="mb-4 cars-list">
+        <li
+          class="px-2 border border-warning rounded cars-list__item"
+          *ngFor="let car of carsInTop"
+        >
+          <div class="car text-light">
+            <div>
+              <button
+                type="button"
+                class="btn btn-danger me-3 my-del-btn"
+                (click)="delFromTopHandler(car.id)"
+              >
+                Delete
+              </button>
+
+              <p class="car-icon">
+                <i class="bi bi-car-front-fill text-secondary fs-2"></i>
+              </p>
+            </div>
+
+            <div>
+              <p>{{ car.name }}</p>
+              <p>{{ car.model }}</p>
+            </div>
+
+            <div class="p-1 rounded">
+              <p>${{ car.price }}</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

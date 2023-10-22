@@ -1,0 +1,16 @@
+.cars-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  .cars-list__item {
+    margin-bottom: 15px;
+    // background-color: #b0daff;
+    background-color: rgba(19, 19, 19, 0.9);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+}

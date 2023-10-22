@@ -1,0 +1,60 @@
+.car {
+  padding: 10px 0px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 24px;
+
+  .my-star {
+    cursor: pointer;
+  }
+
+  div:nth-child(1) {
+    display: flex;
+    align-items: center;
+  }
+
+  div:nth-child(2) {
+    flex: 1 1 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  div:nth-child(3) {
+    background-color: rgba(255, 202, 44, 0.7);
+  }
+
+  p {
+    margin: 0;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .car {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .car {
+    font-size: 14px !important;
+
+    .my-star {
+      width: 30px;
+    }
+
+    .car-icon {
+      display: none;
+    }
+
+    .my-add-btn {
+      padding: 4px;
+      font-size: 12px;
+    }
+  }
+}

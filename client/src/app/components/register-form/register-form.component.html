@@ -1,0 +1,137 @@
+<!-- <div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 m-auto"> -->
+<div class="register-form-wrapper">
+  <h1 class="mb-3 fw-normal text-center">Register for new account</h1>
+
+  <form [formGroup]="registerForm" (ngSubmit)="submit()" novalidate>
+    <div class="mb-3">
+      <input
+        [ngClass]="{
+          'is-valid': registerForm.controls['userName'].valid,
+          'is-invalid':
+            registerForm.controls['userName'].invalid &&
+            (registerForm.controls['userName'].dirty ||
+              registerForm.controls['userName'].touched)
+        }"
+        type="text"
+        class="form-control"
+        formControlName="userName"
+        placeholder="User name"
+      />
+      <div class="invalid-feedback">
+        <div
+          *ngIf="
+            registerForm.controls['userName'].errors &&
+            registerForm.controls['userName'].errors['required']
+          "
+        >
+          Enter User name
+        </div>
+        <div
+          *ngIf="
+            registerForm.controls['userName'].errors &&
+            registerForm.controls['userName'].errors['minlength']
+          "
+        >
+          must be min
+          {{
+            registerForm.controls["userName"].errors["minlength"].requiredLength
+          }}
+          characters
+        </div>
+      </div>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+
+    <div class="mb-3">
+      <input
+        [ngClass]="{
+          'is-valid': registerForm.controls['email'].valid,
+          'is-invalid':
+            registerForm.controls['email'].invalid &&
+            (registerForm.controls['email'].dirty ||
+              registerForm.controls['email'].touched)
+        }"
+        type="email"
+        class="form-control"
+        formControlName="email"
+        placeholder="User email"
+      />
+      <div class="invalid-feedback">
+        <div
+          *ngIf="
+            registerForm.controls['email'].errors &&
+            registerForm.controls['email'].errors['required']
+          "
+        >
+          Enter email
+        </div>
+        <div
+          *ngIf="
+            registerForm.controls['email'].errors &&
+            registerForm.controls['email'].errors['email']
+          "
+        >
+          Incorrectly written email
+        </div>
+      </div>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+
+    <div class="mb-3">
+      <input
+        [ngClass]="{
+          'is-valid': registerForm.controls['password'].valid,
+          'is-invalid':
+            registerForm.controls['password'].invalid &&
+            (registerForm.controls['password'].dirty ||
+              registerForm.controls['password'].touched)
+        }"
+        type="password"
+        class="form-control"
+        formControlName="password"
+        placeholder="Password"
+      />
+      <div class="invalid-feedback">
+        <div
+          *ngIf="
+            registerForm.controls['password'].errors &&
+            registerForm.controls['password'].errors['required']
+          "
+        >
+          Enter password
+        </div>
+        <div
+          *ngIf="
+            registerForm.controls['password'].errors &&
+            registerForm.controls['password'].errors['minlength']
+          "
+        >
+          must be min
+          {{
+            registerForm.controls["password"].errors["minlength"].requiredLength
+          }}
+          characters
+        </div>
+      </div>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+
+    <div class="d-flex justify-content-between">
+      <a routerLink="/login" class="btn btn-success">Sign in</a>
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="registerForm.invalid"
+      >
+        Register
+      </button>
+    </div>
+  </form>
+</div>
+<!-- </div>
+    </div>
+  </div>
+</div> -->

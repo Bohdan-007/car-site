@@ -1,0 +1,112 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "name": "BMW",
+      "model": "X5",
+      "price": "23000",
+      "engineCapacity": 4.4,
+      "mileage": 173000
+    },
+    {
+      "id": 2,
+      "name": "Mazda",
+      "model": "636",
+      "price": "200",
+      "engineCapacity": 2,
+      "mileage": 127000
+    },
+    {
+      "id": 3,
+      "name": "Chery",
+      "model": "QQ",
+      "price": "300",
+      "engineCapacity": 1.2,
+      "mileage": 180000
+    },
+    {
+      "id": 4,
+      "name": "Fiat",
+      "model": "Doblo",
+      "price": "4752.83",
+      "engineCapacity": 2.5,
+      "mileage": 74000
+    },
+    {
+      "id": 5,
+      "name": "Seat",
+      "model": "Leon",
+      "price": "500",
+      "engineCapacity": 1.8,
+      "mileage": 15000
+    },
+    {
+      "id": 1695734246256,
+      "name": "Audi",
+      "model": "Q8",
+      "price": 75000,
+      "engineCapacity": null,
+      "mileage": null
+    },
+    {
+      "id": 1696330853492,
+      "name": "Lexux",
+      "model": "ES",
+      "price": 15000,
+      "engineCapacity": 3.5,
+      "mileage": 135000
+    },
+    {
+      "id": 1696330977725,
+      "name": "Mercdes-Benz",
+      "model": "Sprinter",
+      "price": 12750,
+      "engineCapacity": 3,
+      "mileage": 150000
+    },
+    {
+      "id": 1696331021089,
+      "name": "Toyota",
+      "model": "Camry",
+      "price": 17000,
+      "engineCapacity": 2.4,
+      "mileage": 134751
+    },
+    {
+      "id": 1696331066338,
+      "name": "Nissan",
+      "model": "Armada",
+      "price": 17250,
+      "engineCapacity": 6.3,
+      "mileage": 165284
+    },
+    {
+      "id": 1696331111166,
+      "name": "Honda",
+      "model": "Civic",
+      "price": 8500,
+      "engineCapacity": 2,
+      "mileage": 75000
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "userName": "Test User",
+      "email": "test@gmail.com",
+      "password": "1234"
+    },
+    {
+      "userName": "Boss",
+      "email": "example@ukr.net",
+      "password": "qwer",
+      "id": 2
+    },
+    {
+      "userName": "Boss",
+      "email": "skip@ukr.net",
+      "password": "qwer",
+      "id": 3
+    }
+  ]
+}

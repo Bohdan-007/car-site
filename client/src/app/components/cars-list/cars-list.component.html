@@ -1,0 +1,11 @@
+<ul class="mb-4 cars-list">
+  <li
+    class="px-2 border border-warning rounded cars-list__item"
+    *ngFor="
+      let car of cars | carSearch : searchCarInput : searchCarParam;
+      let i = index
+    "
+  >
+    <app-car [car]="car" [index]="i"></app-car>
+  </li>
+</ul>

@@ -1,0 +1,27 @@
+<div class="car text-light">
+  <div>
+    <p class="me-3">{{ index }}.</p>
+    <!-- <button
+      type="button"
+      class="btn btn-primary me-3 my-add-btn"
+      [ngClass]="{ 'btn-warning': isInTop }"
+      (click)="addToTopHandler()"
+    >
+      Top
+    </button> -->
+    <img src="../../../assets/images/{{imgPath}}" alt="star" class="me-3 my-star" (click)="addToTopHandler()" />
+
+    <p class="car-icon">
+      <i class="bi bi-car-front-fill text-secondary fs-2"></i>
+    </p>
+  </div>
+
+  <div>
+    <p>{{ car.name }}</p>
+    <p>{{ car.model }}</p>
+  </div>
+
+  <div class="p-1 rounded">
+    <p>${{ car.price }}</p>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="hero-wrapper rounded">
+        <h1>Car maintenance</h1>
+        <button
+          routerLink="/auth/car-add"
+          type="button"
+          class="btn btn-primary"
+        >
+          Add new car
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <table class="table table-dark table-bordered mb-3">
+        <thead>
+          <tr>
+            <th class="text-center" scope="col">Car name</th>
+            <th class="text-center" scope="col">Car model</th>
+            <th class="text-center" scope="col">Price</th>
+            <th class="text-center" scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let car of cars">
+            <td>{{ car.name }}</td>
+            <td>{{ car.model }}</td>
+            <td>${{ car.price }}</td>
+            <td class="table-td-actions">
+              <button
+                type="button"
+                class="btn btn-info"
+                (click)="showCarDetails(car.id)"
+              >
+                Details
+              </button>
+              <button
+                type="button"
+                class="btn btn-warning"
+                (click)="editCar(car.id)"
+              >
+                Edit
+              </button>
+              <button
+                type="button"
+                class="btn btn-danger"
+                (click)="deleteCar(car.id)"
+              >
+                Delete
+              </button>
+              <div
+                *ngIf="isDelSpinerShow && deleteCarId === car.id"
+                class="spinner-border text-primary my-spiner"
+                role="status"
+              >
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

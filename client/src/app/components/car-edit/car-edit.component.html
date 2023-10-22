@@ -1,0 +1,134 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="rounded form-wrapper">
+        <h1 class="fs-3 text-center">Editing panel</h1>
+        <form [formGroup]="editCarForm" (ngSubmit)="onSave(car.id)" novalidate>
+          <div class="mb-3">
+            <label for="carIdField" class="form-label">Id</label>
+            <input
+              type="text"
+              class="form-control"
+              value="{{ car.id }}"
+              id="carIdField"
+              disabled
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="carNameField" class="form-label">Car name</label>
+            <input
+              [ngClass]="{
+                'is-valid':
+                  editCarForm.controls['carName'].valid &&
+                  (editCarForm.controls['carName'].dirty ||
+                    editCarForm.controls['carName'].touched),
+                'is-invalid':
+                  editCarForm.controls['carName'].invalid &&
+                  (editCarForm.controls['carName'].dirty ||
+                    editCarForm.controls['carName'].touched)
+              }"
+              type="text"
+              class="form-control"
+              value="{{ car.name }}"
+              id="carNameField"
+              formControlName="carName"
+            />
+            <div class="invalid-feedback">
+              <div
+                *ngIf="
+                  editCarForm.controls['carName'].errors &&
+                  editCarForm.controls['carName'].errors['required']
+                "
+              >
+                Enter car name
+              </div>
+            </div>
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="carModelField" class="form-label">Car model</label>
+            <input
+              [ngClass]="{
+                'is-valid':
+                  editCarForm.controls['carModel'].valid &&
+                  (editCarForm.controls['carModel'].dirty ||
+                    editCarForm.controls['carModel'].touched),
+                'is-invalid':
+                  editCarForm.controls['carModel'].invalid &&
+                  (editCarForm.controls['carModel'].dirty ||
+                    editCarForm.controls['carModel'].touched)
+              }"
+              type="text"
+              class="form-control"
+              value="{{ car.model }}"
+              id="carModelField"
+              formControlName="carModel"
+            />
+            <div class="invalid-feedback">
+              <div
+                *ngIf="
+                  editCarForm.controls['carModel'].errors &&
+                  editCarForm.controls['carModel'].errors['required']
+                "
+              >
+                Enter car model
+              </div>
+            </div>
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="carPriceField" class="form-label"
+              >Car price (USD)</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              value="{{ car.price }}"
+              id="carPriceField"
+              formControlName="carPrice"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="carEngineCapacityField" class="form-label"
+              >Car engine capacity (L)</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              value="{{ car.engineCapacity }}"
+              id="carEngineCapacityField"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="carMileageField" class="form-label"
+              >Car mileage (km)</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              value="{{ car.mileage }}"
+              id="carMileageField"
+            />
+          </div>
+
+          <button type="button" class="btn btn-primary me-3" (click)="goBack()">
+            Cancel
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="onSave(car.id)"
+            [disabled]="editCarForm.invalid"
+          >
+            Save
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

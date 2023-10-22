@@ -1,0 +1,132 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="rounded form-wrapper">
+        <h1 class="fs-3 text-center">Adding panel</h1>
+        <form
+          [formGroup]="addCarForm"
+          (ngSubmit)="onSave()"
+          novalidate
+        >
+          <div class="mb-3">
+            <label for="carNameField" class="form-label">Car name</label>
+            <input
+              [ngClass]="{
+                'is-valid': addCarForm.controls['carName'].valid,
+                'is-invalid':
+                  addCarForm.controls['carName'].invalid &&
+                  (addCarForm.controls['carName'].dirty ||
+                    addCarForm.controls['carName'].touched)
+              }"
+              type="text"
+              class="form-control"
+              id="carNameField"
+              formControlName="carName"
+            />
+            <div class="invalid-feedback">
+              <div
+                *ngIf="
+                  addCarForm.controls['carName'].errors &&
+                  addCarForm.controls['carName'].errors['required']
+                "
+              >
+                Enter car name
+              </div>
+            </div>
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="carModelField" class="form-label">Car model</label>
+            <input
+              [ngClass]="{
+                'is-valid': addCarForm.controls['carModel'].valid,
+                'is-invalid':
+                  addCarForm.controls['carModel'].invalid &&
+                  (addCarForm.controls['carModel'].dirty ||
+                    addCarForm.controls['carModel'].touched)
+              }"
+              type="text"
+              class="form-control"
+              id="carModelField"
+              formControlName="carModel"
+            />
+            <div class="invalid-feedback">
+              <div
+                *ngIf="
+                  addCarForm.controls['carModel'].errors &&
+                  addCarForm.controls['carModel'].errors['required']
+                "
+              >
+                Enter car model
+              </div>
+            </div>
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="carPriceField" class="form-label">Car price</label>
+            <input
+              [ngClass]="{
+                'is-valid': addCarForm.controls['carPrice'].valid,
+                'is-invalid':
+                  addCarForm.controls['carPrice'].invalid &&
+                  (addCarForm.controls['carPrice'].dirty ||
+                    addCarForm.controls['carPrice'].touched)
+              }"
+              type="number"
+              class="form-control"
+              id="carPriceField"
+              formControlName="carPrice"
+            />
+            <div class="invalid-feedback">
+              <div
+                *ngIf="
+                  addCarForm.controls['carPrice'].errors &&
+                  addCarForm.controls['carPrice'].errors['required']
+                "
+              >
+                Enter car price
+              </div>
+            </div>
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="carEngineCapacityField" class="form-label"
+              >Car engine capacity</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="carEngineCapacityField"
+              formControlName="carEngineCapacity"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="carMileageField" class="form-label">Car mileage</label>
+            <input
+              type="number"
+              class="form-control"
+              id="carMileageField"
+              formControlName="carMileage"
+            />
+          </div>
+
+          <button type="button" class="btn btn-primary me-3" (click)="goBack()">
+            Cancel
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="onSave()"
+            [disabled]="addCarForm.invalid"
+          >
+            Create
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
